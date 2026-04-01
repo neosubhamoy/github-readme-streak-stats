@@ -6,6 +6,6 @@ services:
       - "${PORT:-8080}:80"
     environment:
       - TOKEN=${TOKEN}
-      - WHITELIST=${WHITELIST:-neosubhamoy}
-      - DISABLE_CACHE=${DISABLE_CACHE:-false}
+      - WHITELIST=${WHITELIST}
+      - DISABLE_CACHE=${DISABLE_CACHE}
     restart: unless-stopped
