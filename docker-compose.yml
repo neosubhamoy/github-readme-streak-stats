@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    container_name: github-readme-streak-stats
+    ports:
+      - "${PORT:-8080}:80"
+    environment:
+      - TOKEN=${TOKEN}
+      - WHITELIST=${WHITELIST:-neosubhamoy}
+      - DISABLE_CACHE=${DISABLE_CACHE:-false}
+    restart: unless-stopped
